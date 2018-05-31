@@ -22,7 +22,17 @@
     "access": "public"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^2.0.2",
     "semantic-release": "^15.5.0",
     "travis-deploy-once": "^5.0.0"
+  },
+  "release": {
+    "prepare": [
+      {
+        "path": "@semantic-release/changelog",
+        "changelogFile": "CHANGELOG.md"
+      },
+      "@semantic-release/git"
+    ]
   }
 }
